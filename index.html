@@ -2,57 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
     <link rel="stylesheet" href="src/style.css" />
-    <title>World Clock - Pamela Walton</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone-with-data-1970-2030.min.js"></script>
+    <title>World Clock Project</title>
   </head>
   <body>
     <div class="container">
-      <div class="card">
-        <h1>World Clock</h1>
-        <select>
-          <option value="">Select a city...</option>
-          <option value="">London</option>
-          <option value="">New York</option>
-          <option value="">Auckland</option>
-        </select>
-        <div class="city">
+      <h1><a href="/">World Clock</a></h1>
+      <select name="" id="city">
+        <option value="null">Choose a City</option>
+        <option value="current">My Location</option>
+        <option value="America/New_York">New York</option>
+        <option value="Europe/London">London</option>
+        <option value="Asia/Tokyo">Tokyo</option>
+        <option value="Australia/Sydney">Sydney</option>
+        <option value="Africa/Cairo">Cairo</option>
+        <option value="America/Lima">Lima</option>
+        <option value="Europe/Paris">Paris</option>
+      </select>
+      <section id="cities">
+        <div class="clock-display" id="los-angeles">
           <div>
-            <h2>Los Angeles <i class="fas fa-map-marker-alt"></i></h2>
-            <div class="date">August 15th, 2022</div>
+            <div class="city" id="city-name-la"></div>
+            <div class="date"></div>
           </div>
-          <div class="weather">
-            <i class="fas fa-sun"></i>
-            <div class="temperature">78°C</div>
-          </div>
+          <div class="time"><small></small></div>
         </div>
-        <div class="city">
+        <div class="clock-display" id="rome">
           <div>
-            <h2>Paris <i class="fas fa-map-marker-alt"></i></h2>
-            <div class="date">August 15th, 2022</div>
+            <div class="city" id="city-name-r"></div>
+            <div class="date"></div>
           </div>
-          <div class="weather">
-            <i class="fas fa-cloud"></i>
-            <div class="temperature">22°C</div>
-          </div>
+          <div class="time"><small></small></div>
         </div>
-      </div>
-      <footer>
-        This project was coded by <strong>Pamela Walton</strong> and is
-        <a
-          href="https://github.com/waltonpa/world_clock_demo.git"
-          target="_blank"
-          >open sourced on GitHub</a
-        >
-      </footer>
+      </section>
     </div>
+    <footer>
+      This project is coded by
+      <a
+        href="https://glittery-gumption-4563ed.netlify.app/"
+        target="_blank"
+        class="website-link"
+        >Pamela Walton</a
+      >
+      and is
+      <a
+        href="https://github.com/waltonpa/world_clock_demo.git"
+        target="_blank"
+        class="github-link"
+        >open-source coded on GitHub</a
+      >
+      and
+      <a
+        href="https://glittery-gumption-4563ed.netlify.app/"
+        target="_blank"
+        class="netlify-link"
+        >hosted on Netlify</a
+      >
+    </footer>
+    <script src="src/index.js"></script>
   </body>
 </html>
